@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import RoleGuard from '@/components/RoleGuard';
+import TruckMapWithUser from '@/components/TruckMap';
 import { VehicleType } from '@/lib/types';
 import { getVehicleTypes, createJob } from '@/lib/api';
 
@@ -126,30 +127,20 @@ function BookPageContent() {
 
   if (view === 'intro') {
     return (
-      <div className="min-h-screen bg-white py-8 px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-bold mb-6 text-gray-900 text-center">Choose Truck Size</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            {truckSizes.map((ts) => (
-              <div
-                key={ts.code}
-                className="bg-white rounded-xl p-2 text-center border border-gray-200 shadow-sm"
-              >
-                <img src={ts.img} alt={ts.label} className="w-full h-24 object-cover rounded-lg mb-1" />
-                <p className="text-xs font-medium text-gray-700">{ts.label}</p>
-                <p className="text-[10px] text-gray-500">{ts.hint}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <button
-              onClick={() => setView('category')}
-              className="px-8 py-3 text-white rounded-xl font-bold transition-colors"
-              style={{ background: '#e53935' }}
-            >
-              Order
-            </button>
-          </div>
+      <div className="min-h-screen bg-white">
+        <div className="p-4">
+          <h2 className="text-xl font-bold mb-2 text-gray-900">Nearby Trucks</h2>
+          <p className="text-sm text-gray-500 mb-4">Tap a truck to reserve it</p>
+          <TruckMapWithUser />
+        </div>
+        <div className="p-4">
+          <button
+            onClick={() => setView('category')}
+            className="w-full p-4 text-white rounded-xl font-bold transition-colors"
+            style={{ background: '#e53935' }}
+          >
+            Book a Truck →
+          </button>
         </div>
       </div>
     );
