@@ -37,11 +37,6 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio build artifacts
-/android/app/debug
-/android/app/profile
-/android/app/release
-
 # --- ProjectAlpha specific ---
 
 # Environment secrets — NEVER commit
@@ -84,3 +79,27 @@ graphify-out/
 # Local database dumps
 *.sql
 !seed.sql
+
+# --- Flutter/Android build artifacts (CRITICAL: these exceed GitHub limits) ---
+**/build/
+**/build/app/
+**/build/app/intermediates/
+**/build/app/outputs/
+**/build/app/intermediates/assets/
+**/build/app/intermediates/merged_native_libs/
+**/build/app/intermediates/cmake/
+**/build/app/intermediates/transforms/
+**/build/app/intermediates/javac/
+**/build/app/intermediates/compile_artifacts/
+**/build/app/intermediates/incremental/
+**/build/app/intermediates/incremental/
+**/*.apk
+**/*.aab
+**/*.so
+**/*.o
+**/*.dylib
+**/flutter_assets/
+**/kernel_blob.bin
+**/isolate_snapshot.instr
+**/vm_snapshot.data
+**/vm_snapshot.out
