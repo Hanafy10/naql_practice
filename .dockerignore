@@ -1,0 +1,9 @@
+.git
+.DS_Store
+__MACOSX
+truck.zip
+build
+.dart_tool
+.idea
+.vscode
+.env

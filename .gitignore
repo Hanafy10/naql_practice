@@ -1,0 +1,86 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# --- ProjectAlpha specific ---
+
+# Environment secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+
+# Next.js build output
+.next/
+next.config.tsbuildinfo
+
+# Node modules (frontend)
+frontend/node_modules/
+
+# Python
+**/__pycache__/
+*.egg-info/
+.eggs/
+api/.pytest_cache/
+
+# Auto-generated CSV exports (contains hashed passwords)
+exports/
+exports/*.csv
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# Generated knowledge graph
+graphify-out/
+
+# Flutter metadata
+.metadata
+
+# Kilo agent state
+.kilo/
+.kilocode/
+.opencode/
+
+# Local database dumps
+*.sql
+!seed.sql
