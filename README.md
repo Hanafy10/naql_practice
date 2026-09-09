@@ -1,5 +1,7 @@
 # Naql — Logistics Marketplace
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A full-stack logistics platform with a Next.js web frontend, a Flutter mobile/desktop app, and a FastAPI backend.
 
 ## Architecture
